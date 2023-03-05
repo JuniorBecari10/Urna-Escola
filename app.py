@@ -10,6 +10,10 @@ app_name = "Urna Eletrônica"
 def style():
   return send_file("static/style.css")
 
+@app.route("/script.js")
+def script():
+  return send_file("static/script.js")
+
 # Routes
 
 @app.route("/")
