@@ -47,11 +47,13 @@ main {
 
   border-radius: 60px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 25%);
+}
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+#wrapper * {
+  margin-left: 50%;
+  transform: translateX(-50%);
+
+  display: block;
 }
 
 #number-inp {
@@ -67,7 +69,28 @@ main {
 
   width: 128pt;
 
-  border-bottom: 2px solid #000;
+  border-bottom: 5px solid #000;
+
+  margin-top: 80px;
+}
+
+#votar {
+  margin-top: 30px;
+
+  width: 150pt;
+  height: 50px;
+
+  background-color: #2570E0;
+
+  border: none;
+  outline: none;
+
+  border-radius: 30px;
+  
+  color: #fff;
+  font-family: "Comfortaa", sans-serif;
+
+  font-size: 14pt;
 }
 
 input[type=number]::-webkit-outer-spin-button,

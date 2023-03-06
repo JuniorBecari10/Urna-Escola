@@ -6,12 +6,13 @@
 </header>
 <main>
   <div id="wrapper">
-    <form>
-      <input type="text" id="number-inp">
-      <input type="submit" value="Votar">
+    <form action="/fim" method="post" id="form">
+      <input type="text" id="number-inp" name="number">
+      <input type="submit" class="ripple" id="votar" value="Votar">
     </form>
   </div>
 </main>
 
+<script src="/ripple.js"></script>
 <script src="/script.js"></script>
 {% endblock %}
