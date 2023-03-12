@@ -1,4 +1,4 @@
-from flask import Flask, render_template, send_file, request
+from flask import Flask, redirect, render_template, send_file, request
 
 app = Flask(__name__)
 
@@ -25,10 +25,6 @@ def style():
 def script():
   return send_file("static/script.js")
 
-@app.route("/fim.js")
-def fim_js():
-  return send_file("static/fim.js")
-
 # Routes
 
 @app.route("/")
@@ -47,8 +43,16 @@ def fim():
     name = cand["name"]
     votes = cand["votes"]
 
-    print(f"Votou no candidato {name}. Ele tem {votes} votos.")
+    print(f"Votou no candidato {name}. Ele tem {votes} voto(s).")
   except KeyError:
     print(f"Candidato com o número {number} não existe. Voto anulado.")
+  
+  print("\nTabela de votos:")
+  for key in candidates:
+    cand = candidates[key]
+    votes = cand["votes"]
+    print(f"{key} | {votes}")
+  
+  print()
 
-  return render_template("/fim.html", title=app_name)
+  return redirect("/")
