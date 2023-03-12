@@ -1,3 +1,5 @@
+# run with 'flask run -h 0.0.0.0'
+
 from flask import Flask, redirect, render_template, send_file, request
 
 app = Flask(__name__)
