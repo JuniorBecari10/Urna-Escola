@@ -90,7 +90,14 @@ main {
   color: #fff;
   font-family: "Comfortaa", sans-serif;
 
+  box-shadow: 0 0 15px rgba(0, 0, 0, 25%);
+
   font-size: 14pt;
+  transition: background-color 0.3s;
+}
+
+#votar:hover {
+  background-color: #3a7fe7;
 }
 
 input[type=number]::-webkit-outer-spin-button,

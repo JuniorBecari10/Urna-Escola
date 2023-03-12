@@ -25,9 +25,9 @@ def style():
 def script():
   return send_file("static/script.js")
 
-@app.route("/ripple.js")
-def ripple():
-  return send_file("static/ripple.js")
+@app.route("/fim.js")
+def fim_js():
+  return send_file("static/fim.js")
 
 # Routes
 
